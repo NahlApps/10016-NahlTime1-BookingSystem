@@ -1046,7 +1046,7 @@ try {
 // tween.start()
 document.getElementById("date").setAttribute("min", new Date().toLocaleDateString("fr-ca"))
 // const defaultLink = "https://script.google.com/macros/s/AKfycbyQVnKXb6U_XD9ZS2AllJSV20kCGr6G55dq2q8Fy3qRIHuQnM1O6vIUJ7D3DHaLOszoFw/exec";
-const defaultLink2 = `https://nahl-platform.vercel.app/api/app/AM/general/${'2f7f5187-7b48-4e8f-853d-9059e94b94f0'}/form`
+const defaultLink2 = `https://nahl-platform.vercel.app/api/app/AM/general/${'d461169e-d537-4b6c-93de-8d3799eec492'}/form`
 const acceptedHourdiff = 1;
 const acceptedMindiff = 30;
 var mydata = ""
@@ -2201,13 +2201,11 @@ let map, infoWindow, marker;
 let prePosition = "https://www.google.com/maps/search/?api=1&query=";
 let position = ''
 function myMap() {
-  const QATIF = {
-  north: 26.631382547167608,
-  // south: 26.529935663804867,
-  // south: 26.49733998178417,
-  south: 26.457409255603718,
-  west: 49.936830427303164,
-  east: 50.09079470797919,
+  const APP_Location= {
+  north: 21.428292,
+  south: 21.416541,
+  west: 39.816881,
+  east: 39.833443,
 };
 
 // let map_bounds = google.maps.LatLngBounds(
@@ -2217,15 +2215,13 @@ function myMap() {
 // )
 // console.log(map_bounds.getNorthEast())
 var mapProp= {
-  // center:new google.maps.LatLng(26.573510, 49.998902),
   center: {
-    //  lat: 26.573510, lng: 49.998902,
-     lat:26.525124906195455, lng:50.01575804927679
+     lat:21.423189, lng:39.825765
     },
   zoom:12,
   minZoom: 12 ,
   restriction: {
-     latLngBounds: QATIF,
+     latLngBounds: APP_Location,
       strictBounds: false,
     },
 };
@@ -2234,9 +2230,7 @@ map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 infoWindow = new google.maps.InfoWindow();
 
 const myLatlng = {
-  //  lat: 26.573510, lng: 49.998902 
-   lat:26.525124906195455, lng:50.01575804927679
-
+     lat:21.423189, lng:39.825765
   };
 
  marker = new google.maps.Marker({
